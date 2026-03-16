@@ -44,6 +44,7 @@ Yes, AI helped generate test cases for the bugs I fixed. It also explained how t
 ## 4. What did you learn about Streamlit and state?
 
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Every time you click a button or interact with anything in a Streamlit app, the entire Python script runs again from top to bottom and this is called a "rerun." That means any regular variable you define gets reset to its original value each time. Session state is Streamlit's way of remembering values across these reruns, like a small memory that persists between clicks. In this game, things like the secret number, attempt count, and score are stored in st.session_state so they don't reset every time the player submits a guess. Without session state, the secret number would change on every button click, making the game impossible to win.
 
 ---
 
@@ -51,5 +52,10 @@ Yes, AI helped generate test cases for the bugs I fixed. It also explained how t
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
   - This could be a testing habit, a prompting strategy, or a way you used Git.
+One habit I want to reuse is writing clearer prompts when asking AI for help. I realized that giving structured prompts with context, clear instructions, and sometimes small examples (few-shot prompting) helped the AI give much more useful answers. This reduced the number of back-and-forth attempts needed to solve a problem. I also liked using Copilot as a kind of peer programmer because it helped point out potential issues early and kept me productive while coding.
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+Next time, I would start by asking the AI to analyze and explain the problem first before making any changes. This would help me understand the existing logic and the potential bugs early on. Having that context would make it easier to guide the AI in a more productive way when implementing fixes. I think this approach would prevent unnecessary edits and make the development process more efficient.
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+This project helped me realize that AI-generated code is useful but should not be blindly trusted. Sometimes the AI suggests extra or unnecessary changes, so it is important to review and test the code carefully before accepting it. Verifying changes early helps avoid bigger issues later in the project.
